@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>十大战略赛道看板 · VentureSights · 2026-05-30</title>
+<style>
+:root {
+  --bg: #f8fafc; --card: #fff; --text: #0f172a; --muted: #64748b;
+  --border: #e2e8f0; --accent: #2563eb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5; }
+header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: #fff; padding: 28px 32px 20px; }
+header h1 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 600; }
+header p { margin: 0; opacity: 0.85; font-size: 0.9rem; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 20px 24px 48px; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; position: sticky; top: 0;
+  background: var(--bg); padding: 12px 0; z-index: 10; border-bottom: 1px solid var(--border); }
+.nav-item { display: flex; flex-direction: column; align-items: center; padding: 8px 12px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none;
+  color: var(--text); font-size: 12px; min-width: 64px; transition: border-color .15s; }
+.nav-item:hover { border-color: var(--accent); }
+.nav-item span { color: var(--muted); font-size: 11px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 32px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.index-caption { margin: 0 0 10px; font-size: 11px; color: var(--muted); line-height: 1.45; }
+.track-id { font-size: 11px; color: var(--muted); background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.card-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+.card-metrics label { display: block; font-size: 11px; color: var(--muted); }
+.card-metrics b { font-size: 15px; }
+.card-metrics small { display: block; font-size: 10px; color: var(--muted); }
+.card-spark { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.spark-label { display: block; font-size: 11px; color: var(--muted); margin-top: 6px; }
+.sector-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px 24px; margin-bottom: 20px; }
+.sector-section h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.sector-section h3 { margin: 20px 0 10px; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+.sector-meta { margin-bottom: 8px; }
+.ind-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ind-table th, .ind-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+.ind-table th { background: #f8fafc; font-weight: 600; }
+.ind-table .num { font-variant-numeric: tabular-nums; font-weight: 500; }
+.ind-explain { font-size: 12px; color: var(--muted); line-height: 1.45; max-width: 320px; }
+.sub-h4 { margin: 24px 0 10px; font-size: 0.88rem; color: var(--text); font-weight: 600; }
+.pred-note { margin: 0 0 8px; font-size: 12px; color: var(--muted); }
+.pred-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 8px; }
+.pred-table th, .pred-table td { border: 1px solid var(--border); padding: 7px 10px; text-align: center; }
+.pred-table th { background: #f8fafc; font-weight: 600; }
+.pred-table th:first-child, .pred-table td:first-child { text-align: left; }
+.pred-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.pred-history td { font-size: 15px; }
+.dir-up { color: #16a34a; font-weight: 700; }
+.dir-down { color: #dc2626; font-weight: 700; }
+.hit-yes { color: #16a34a; font-weight: 700; }
+.hit-no { color: #dc2626; font-weight: 700; }
+.hit-pending { color: var(--muted); font-size: 12px; }
+.lc { display: inline-block; width: 18px; text-align: center; font-weight: 700; font-size: 11px;
+  border-radius: 3px; padding: 1px 0; }
+.lc-l { background: #dbeafe; color: #1d4ed8; }
+.lc-c { background: #dcfce7; color: #15803d; }
+.lc-k { background: #fef3c7; color: #b45309; }
+.lc-m { background: #f3e8ff; color: #7c3aed; }
+.muted { color: var(--muted); }
+.val-index-desc { margin: 0 0 14px; font-size: 13px; color: var(--text); line-height: 1.5; }
+.val-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 0; }
+.val-item label { display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+.val-item div { font-size: 16px; font-weight: 600; }
+.val-item-wide { grid-column: span 2; }
+.val-item-wide small { display: block; font-weight: 400; font-size: 11px; margin-top: 4px; }
+.dual-spark { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.spark-box { display: flex; flex-direction: column; align-items: flex-start; min-width: 200px; }
+.spark-single { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.spark { display: block; overflow: visible; vertical-align: middle; }
+.ind-table td:last-child { min-width: 128px; white-space: nowrap; }
+.brand { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 4px; }
+.disclaimer { text-align: left; max-width: 720px; margin: 0 auto; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.disclaimer h4 { margin: 16px 0 6px; font-size: 12px; color: var(--text); }
+footer { padding: 32px 24px 48px; border-top: 1px solid var(--border); background: #fff; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="padding:0">
+    <div class="brand">VentureSights</div>
+    <h1>十大战略赛道看板</h1>
+    <p>数据截至 2026-05-30 · V15 机会分析（L/C/K/M）+ 赛道估值（PE/指数/T+5方向）</p>
+  </div>
+</header>
+<div class="wrap">
+  <nav class="nav"><a href="#sec-T01" class="nav-item">T01<span>人工智能</span></a><a href="#sec-T02" class="nav-item">T02<span>科技服务</span></a><a href="#sec-T03" class="nav-item">T03<span>集成电路</span></a><a href="#sec-T04" class="nav-item">T04<span>医药健康</span></a><a href="#sec-T05" class="nav-item">T05<span>商业航天</span></a><a href="#sec-T06" class="nav-item">T06<span>工业软件</span></a><a href="#sec-T07" class="nav-item">T07<span>高端科学</span></a><a href="#sec-T08" class="nav-item">T08<span>量子计算</span></a><a href="#sec-T09" class="nav-item">T09<span>具身智能</span></a><a href="#sec-T10" class="nav-item">T10<span>脑机接口</span></a><a href="#sec-T11" class="nav-item">T11<span>储能产业</span></a></nav>
+  <h2 style="font-size:1rem;color:var(--muted);margin:0 0 12px">赛道总览</h2>
+  <div class="grid"><div class="card" data-track="T01">
+  <div class="card-head">
+    <div><span class="track-id">T01</span> <strong>人工智能</strong></div>
+    <div class="badges"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">定价中性</span></div>
+  </div>
+  <p class="index-caption">中证人工智能主题指数（930713.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>6767.5743</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>67.11</b><small>PE 近20期窗口内位置 53%</small></div>
+    <div><label>T+5 方向</label><b>↑</b><small>6823.46 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,26.8 10.0,24.5 14.0,22.9 18.0,24.1 22.0,20.3 26.0,21.2 30.0,22.9 34.0,21.7 38.0,23.8 42.0,22.8 46.0,19.8 50.0,15.4 54.0,12.2 58.0,13.0 62.0,9.0 66.0,8.0 70.0,3.4 74.0,6.0 78.0,9.0 82.0,8.2 86.0,6.1 90.0,5.7 94.0,10.5 98.0,7.3 102.0,2.0 106.0,3.0 110.0,5.4 114.0,3.0 118.0,8.1"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T02">
+  <div class="card-head">
+    <div><span class="track-id">T02</span> <strong>科技服务</strong></div>
+    <div class="badges"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+  </div>
+  <p class="index-caption">中证信息技术（000935.SH）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>8542.0786</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>66.7</b><small>PE 近20期窗口内位置 78%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>8590.13 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,28.7 10.0,27.7 14.0,26.0 18.0,26.4 22.0,23.7 26.0,24.5 30.0,24.4 34.0,21.5 38.0,22.7 42.0,22.6 46.0,21.1 50.0,17.2 54.0,15.2 58.0,16.1 62.0,11.9 66.0,12.1 70.0,8.9 74.0,12.2 78.0,13.5 82.0,12.0 86.0,9.9 90.0,8.1 94.0,11.1 98.0,6.9 102.0,2.0 106.0,2.2 110.0,3.8 114.0,2.8 118.0,7.3"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T03">
+  <div class="card-head">
+    <div><span class="track-id">T03</span> <strong>集成电路</strong></div>
+    <div class="badges"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+  </div>
+  <p class="index-caption">中证半导体（H30184.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>13657.1611</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>120.07</b><small>PE 近20期窗口内位置 84%</small></div>
+    <div><label>T+5 方向</label><b>↑</b><small>13827.34 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,29.2 10.0,28.8 14.0,27.9 18.0,28.6 22.0,27.0 26.0,28.0 30.0,27.0 34.0,24.2 38.0,24.8 42.0,24.9 46.0,21.8 50.0,18.1 54.0,16.8 58.0,18.6 62.0,14.3 66.0,13.9 70.0,11.6 74.0,13.2 78.0,13.6 82.0,12.7 86.0,10.1 90.0,6.4 94.0,10.0 98.0,7.8 102.0,2.0 106.0,3.1 110.0,5.0 114.0,3.8 118.0,8.7"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T04">
+  <div class="card-head">
+    <div><span class="track-id">T04</span> <strong>医药健康</strong></div>
+    <div class="badges"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+  </div>
+  <p class="index-caption">中证医药100（000978.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>9670.8971</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>22.94</b><small>PE 近20期窗口内位置 0%</small></div>
+    <div><label>T+5 方向</label><b>↑</b><small>9674.07 · 2026-06-01</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 6.0,2.0 10.0,5.9 14.0,6.5 18.0,7.7 22.0,5.6 26.0,7.6 30.0,8.8 34.0,9.4 38.0,8.6 42.0,8.8 46.0,9.1 50.0,9.0 54.0,8.4 58.0,9.8 62.0,5.3 66.0,8.2 70.0,9.7 74.0,14.5 78.0,16.6 82.0,21.5 86.0,20.0 90.0,21.8 94.0,20.9 98.0,23.1 102.0,23.4 106.0,24.5 110.0,26.3 114.0,30.0 118.0,27.0"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T05">
+  <div class="card-head">
+    <div><span class="track-id">T05</span> <strong>商业航天</strong></div>
+    <div class="badges"><span class="badge" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">侧重风险</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+  </div>
+  <p class="index-caption">中证航空航天（H30213.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>10205.2399</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>71.11</b><small>PE 近20期窗口内位置 5%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>10103.82 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,9.8 6.0,9.8 10.0,8.9 14.0,4.8 18.0,6.3 22.0,6.8 26.0,7.3 30.0,11.5 34.0,11.8 38.0,16.8 42.0,16.0 46.0,13.2 50.0,9.7 54.0,8.3 58.0,3.4 62.0,2.0 66.0,4.4 70.0,3.3 74.0,10.3 78.0,13.9 82.0,14.3 86.0,14.4 90.0,16.0 94.0,19.8 98.0,19.4 102.0,18.8 106.0,22.3 110.0,25.2 114.0,24.2 118.0,30.0"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T06">
+  <div class="card-head">
+    <div><span class="track-id">T06</span> <strong>工业软件与工业智能</strong></div>
+    <div class="badges"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+  </div>
+  <p class="index-caption">中证工业互联网主题指数（931495.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>4027.8437</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>39.14</b><small>PE 近20期窗口内位置 25%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>4018.47 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,27.6 10.0,27.0 14.0,25.1 18.0,25.4 22.0,22.0 26.0,22.5 30.0,23.4 34.0,20.5 38.0,22.5 42.0,20.9 46.0,20.9 50.0,16.0 54.0,13.4 58.0,13.4 62.0,9.1 66.0,11.4 70.0,7.9 74.0,12.1 78.0,13.0 82.0,10.6 86.0,7.1 90.0,5.6 94.0,10.4 98.0,6.6 102.0,2.0 106.0,3.1 110.0,4.8 114.0,4.4 118.0,10.0"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T07">
+  <div class="card-head">
+    <div><span class="track-id">T07</span> <strong>高端科学仪器</strong></div>
+    <div class="badges"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+  </div>
+  <p class="index-caption">上证细分机械（000812.SH）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>8207.632</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>28</b><small>PE 近20期窗口内位置 1%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>8090.83 · 2026-06-01</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,29.7 6.0,22.8 10.0,26.0 14.0,23.0 18.0,20.4 22.0,20.3 26.0,20.3 30.0,22.4 34.0,25.5 38.0,28.7 42.0,17.9 46.0,19.2 50.0,4.8 54.0,4.7 58.0,13.1 62.0,3.5 66.0,10.8 70.0,2.0 74.0,16.0 78.0,17.2 82.0,23.2 86.0,20.8 90.0,17.6 94.0,26.2 98.0,21.4 102.0,23.2 106.0,24.6 110.0,23.9 114.0,21.5 118.0,30.0"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T08">
+  <div class="card-head">
+    <div><span class="track-id">T08</span> <strong>量子计算</strong></div>
+    <div class="badges"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">不适用—无市场指数锚</span></div>
+  </div>
+  <p class="index-caption">中证TMT（已停用·仅档案）（000998.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>3823.0871</b><small>20260522</small></div>
+    <div><label>PE(TTM)</label><b>57.61</b><small>无指数锚</small></div>
+    <div><label>T+5 方向</label><b>—</b><small>— · </small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,29.9 10.0,28.3 14.0,27.8 18.0,26.1 22.0,27.4 26.0,25.8 30.0,24.4 34.0,22.1 38.0,23.0 42.0,19.7 46.0,20.4 50.0,20.9 54.0,17.8 58.0,19.8 62.0,19.0 66.0,17.6 70.0,13.6 74.0,11.0 78.0,11.0 82.0,6.8 86.0,7.1 90.0,3.5 94.0,6.5 98.0,8.4 102.0,6.4 106.0,3.2 110.0,2.0 114.0,7.0 118.0,2.8"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T09">
+  <div class="card-head">
+    <div><span class="track-id">T09</span> <strong>具身智能</strong></div>
+    <div class="badges"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+  </div>
+  <p class="index-caption">中证机器人（H30590.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>2097.785</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>60.14</b><small>PE 近20期窗口内位置 76%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>2097.78 · 2026-06-05</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,27.6 10.0,26.6 14.0,25.5 18.0,26.2 22.0,25.1 26.0,26.0 30.0,27.0 34.0,24.0 38.0,26.5 42.0,25.2 46.0,23.9 50.0,20.9 54.0,16.0 58.0,12.8 62.0,10.4 66.0,11.9 70.0,8.7 74.0,12.0 78.0,7.8 82.0,5.6 86.0,3.7 90.0,4.5 94.0,4.9 98.0,2.5 102.0,2.0 106.0,2.9 110.0,7.8 114.0,7.7 118.0,13.5"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T10">
+  <div class="card-head">
+    <div><span class="track-id">T10</span> <strong>脑机接口</strong></div>
+    <div class="badges"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">不适用—无市场指数锚</span></div>
+  </div>
+  <p class="index-caption">中证医疗保健（已停用·仅档案）（H30178.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>13079.0844</b><small>20260522</small></div>
+    <div><label>PE(TTM)</label><b>29.21</b><small>无指数锚</small></div>
+    <div><label>T+5 方向</label><b>—</b><small>— · </small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,7.6 6.0,18.0 10.0,14.2 14.0,20.4 18.0,18.1 22.0,18.4 26.0,16.2 30.0,19.8 34.0,15.3 38.0,16.1 42.0,10.8 46.0,12.5 50.0,13.0 54.0,15.7 58.0,17.5 62.0,15.5 66.0,17.2 70.0,14.6 74.0,12.2 78.0,7.9 82.0,2.0 86.0,8.4 90.0,7.1 94.0,16.7 98.0,20.0 102.0,26.6 106.0,21.7 110.0,29.5 114.0,30.0 118.0,29.9"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div><div class="card" data-track="T11">
+  <div class="card-head">
+    <div><span class="track-id">T11</span> <strong>储能产业</strong></div>
+    <div class="badges"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+  </div>
+  <p class="index-caption">中证储能主题（931747.CSI）</p>
+  <div class="card-metrics">
+    <div><label>收盘点位</label><b>9045.0673</b><small>20260529</small></div>
+    <div><label>PE(TTM)</label><b>29.53</b><small>PE 近28期窗口内位置 15%</small></div>
+    <div><label>T+5 方向</label><b>↓</b><small>8773.72 · 2026-06-01</small></div>
+  </div>
+  <div class="card-spark"><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 6.0,30.0 10.0,27.8 14.0,23.4 18.0,19.9 22.0,22.9 26.0,17.2 30.0,11.2 34.0,13.9 38.0,15.1 42.0,8.2 46.0,9.5 50.0,5.4 54.0,6.3 58.0,8.5 62.0,4.6 66.0,6.8 70.0,4.9 74.0,9.1 78.0,8.6 82.0,7.0 86.0,5.3 90.0,2.0 94.0,6.6 98.0,4.9 102.0,6.4 106.0,5.8 110.0,2.8 114.0,2.0 118.0,6.9"/></svg><span class="spark-label">近30期收盘（仓表 M01）</span></div>
+</div></div>
+  <section id="sec-T01" class="sector-section">
+<h2>T01 人工智能</h2>
+<div class="sector-meta"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">定价中性</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证人工智能主题指数（930713.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>6767.5743</div></div>
+  <div class="val-item"><label>PE TTM</label><div>67.11</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>53%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>定价中性</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↑ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,33.8 15.5,31.0 22.3,28.8 29.0,30.4 35.8,25.6 42.6,26.7 49.3,28.9 56.1,27.4 62.8,30.0 69.6,28.8 76.3,24.9 83.1,19.2 89.9,15.2 96.6,16.2 103.4,11.0 110.1,9.7 116.9,3.8 123.7,7.1 130.4,11.0 137.2,10.0 143.9,7.3 150.7,6.7 157.4,13.0 164.2,8.8 171.0,2.0 177.7,3.3 184.5,6.4 191.2,3.3 198.0,9.8"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,11.7 12.3,8.6 22.6,9.8 32.9,2.0 43.3,2.6 53.6,8.0 63.9,7.8 74.2,12.7 84.5,10.3 94.8,9.2 105.2,9.2 115.5,33.2 125.8,29.8 136.1,28.3 146.4,38.0 156.7,31.5 167.1,20.5 177.4,21.1 187.7,25.4 198.0,19.0"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>linear</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">6767.5743</td>
+<td class="muted">2026-06-05</td>
+<td class="num">6823.46</td>
+<td><span class="dir-up">↑</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>3</strong> 次 · 准确率 <strong>75%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>6767.57</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>6767.57</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>6767.57</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>6767.57</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> AI-L01</td>
+<td>SEC EDGAR 10-Q</td>
+<td class="ind-explain">美系 hyperscaler / 云厂商 合并披露面板 的资本开支现金轨迹：主体为在 SEC 以 ADR/普通股披露合并报表的 Microsoft、Alphabet（GOOGL）、Meta；非「仅微软」指标。 （绝对额（百万美元）/季 · 合并报表现金流量表科目（SEC Form 10-Q）） 默认面板（本字典锁定）：`run_v15_compute` 经 SEC data.gov companyfacts API 读取 MSFT、GOOGL、META 最近 10-Q 的 `PaymentsToAcquirePropertyPlantAndEquipment`（同 `end` 取最短 `start—end` 为当季），原值百万美元后 求和。缺…</td>
+<td class="num">85,547 百万美元</td>
+<td class="muted">2026-03-31</td>
+<td class="muted">29,876 百万美元</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 10.9,27.0 19.8,25.5 28.8,20.0 37.7,29.2 46.6,24.8 55.5,22.5 64.5,14.4 73.4,27.9 82.3,20.9 91.2,15.9 100.2,2.0 109.1,24.7 118.0,12.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> AI-L02</td>
+<td>SIA News</td>
+<td class="ind-explain">全球半导体销售额（WSTS） （绝对额（美元）/月 · WSTS 全球销售额） 采用 SIA 发布的 WSTS 月度全球销售额新闻稿主文数值。</td>
+<td class="num">116.21 十亿美元</td>
+<td class="muted">2026-03</td>
+<td class="muted">101.56 十亿美元</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,13.6 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> AI-L03</td>
+<td>NVIDIA IR</td>
+<td class="ind-explain">GPU 龙头数据中心分部收入 （分部收入/季 · 公司分部披露） NVIDIA IR 新闻稿/HTML 中 Data Center revenue 季度值（`company_ir_segment_revenue_html`）。</td>
+<td class="num">75.25 十亿美元</td>
+<td class="muted">2026-04-26</td>
+<td class="muted">51.22 十亿美元</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AI-C01</td>
+<td>工信部软件和信息技术服务业</td>
+<td class="ind-explain">软件业业务收入累计增速 （累计同比（%）/月 · 规模以上互联网与软件服务业统计口径） 工信部软件业运行通报正文同比增长（%）。</td>
+<td class="num">11.7%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">11.6%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,29.2 21.3,30.0 40.7,13.5 60.0,2.0 79.3,2.8 98.7,16.0 118.0,15.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AI-C02</td>
+<td>国家统计局工业产品产量</td>
+<td class="ind-explain">集成电路产量同比 （当月同比（%）/月 · 规模以上工业主要产品产量） 国家统计局规模以上工业主要产品产量表「集成电路」行。</td>
+<td class="num">24.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">12.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AI-C03</td>
+<td>国家统计局国民经济运行情况</td>
+<td class="ind-explain">服务业生产指数—信息传输、软件和信息技术服务业同比 （同比（%）/月 · 服务业生产指数分行业） 国家统计局《国民经济运行情况》新闻稿「服务业生产指数」分行业段落。</td>
+<td class="num">10.9%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AI-K01</td>
+<td>GPU算力租赁价格</td>
+<td class="ind-explain">GPU 云实例按需租赁公开定价——K 层解读为 AI 训练/推理的边际算力成本信号，价格下行意味着算力获取门槛降低、AI 应用成本结构改善。 （绝对额（元/GPU-小时）/日 · GPU 云实例按需单价（AutoDL 公开定价）） autodl_gpu_rental_price → AutoDL 官网 GPU 实例定价页 → 提取代表性型号（A100 80GB 优先）最低按需小时价。</td>
+<td class="num">2.5</td>
+<td class="muted">2025-06-01</td>
+<td class="muted">3.2</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AI-K02</td>
+<td>同 AI-C01</td>
+<td class="ind-explain">软件业业务收入累计增速——K 层解读为 AI 下游软件需求景气度，反映 AI 应用的商业转化速度。 （累计同比（%）/月 · 软件业（K 层重标：AI 下游需求景气）） alias_reference → AI-C01；K 层重标为下游需求景气锚。</td>
+<td class="num">11.7%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">11.6%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,29.2 21.3,30.0 40.7,13.5 60.0,2.0 79.3,2.8 98.7,16.0 118.0,15.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AI-K03</td>
+<td>同 AI-L02</td>
+<td class="ind-explain">全球半导体销售额——K 层解读为全球算力供需平衡信号，销售额下降可能预示芯片供给过剩、算力成本下行加速。 （绝对额（美元）/月 · 全球半导体销售额（K 层重标：全球算力供需平衡）） alias_reference → AI-L02；K 层重标为全球供需平衡锚。</td>
+<td class="num">116.21 十亿美元</td>
+<td class="muted">2026-03</td>
+<td class="muted">101.56 十亿美元</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,13.6 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> AI-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证人工智能主题指数 — 选取为人工智能提供基础资源、技术及应用支持的代表性公司；市场化定价反馈。 （收盘价/日（月频落盘） · 中证人工智能主题指数 (930713.CSI)） Tushare index_daily(ts_code=&#x27;930713.CSI&#x27;) 取最近交易日 close；月频报告取当月最后交易日或最新可用交易日收盘价。</td>
+<td class="num">6,767.57</td>
+<td class="muted">20260529</td>
+<td class="muted">7,031.44</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,21.8 10.9,6.6 19.8,15.1 28.8,24.9 37.7,22.4 46.6,15.6 55.5,14.0 64.5,30.0 73.4,19.3 82.3,2.0 91.2,5.3 100.2,13.3 109.1,5.2 118.0,21.9"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> AI-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证人工智能主题指数滚动市盈率（PE-TTM）——历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证人工智能主题指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;930713.CSI&#x27;) 取最近交易日 pe_ttm；历史分位由 gen_v15_opportunity_report.py 从 v15_panel.csv 历史快照即时计算（近5年）。</td>
+<td class="num">67.11x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">65.51x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 10.9,6.6 19.8,4.4 28.8,3.3 37.7,3.3 46.6,25.5 55.5,22.4 64.5,21.1 73.4,30.0 82.3,24.0 91.2,13.8 100.2,14.4 109.1,18.3 118.0,12.4"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> AI-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">纳斯达克综合指数 — 以 Nasdaq Composite 作为 NDX 的可获得替代锚；覆盖美股大型科技股（MSFT/AAPL/NVDA/GOOGL/META/AMZN 等），与 T01 境外 hyperscaler 链高度重合（偏差：较 NDX 更宽，标注为宽锚替代）。 （收盘价/日（月频落盘） · 纳斯达克综合指数 (IXIC/NDX)） akshare index_global_spot_em() 筛选「纳斯达克」取最新价；失败回退 Tushare index_global(IXIC)。</td>
+<td class="num">26,917.47</td>
+<td class="muted">20260528</td>
+<td class="muted">26,674.73</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,19.9 10.9,19.2 19.8,24.2 28.8,15.8 37.7,9.5 46.6,20.5 55.5,24.1 64.5,30.0 73.4,19.3 82.3,18.7 91.2,17.3 100.2,9.0 109.1,8.5 118.0,2.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T02" class="sector-section">
+<h2>T02 科技服务</h2>
+<div class="sector-meta"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证信息技术（000935.SH）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>8542.0786</div></div>
+  <div class="val-item"><label>PE TTM</label><div>66.7</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>78%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>已定价</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,36.3 15.5,35.1 22.3,32.8 29.0,33.3 35.8,29.9 42.6,30.9 49.3,30.8 56.1,27.0 62.8,28.6 69.6,28.5 76.3,26.5 83.1,21.5 89.9,19.0 96.6,20.1 103.4,14.7 110.1,15.0 116.9,10.8 123.7,15.1 130.4,16.8 137.2,14.8 143.9,12.1 150.7,9.9 157.4,13.6 164.2,8.3 171.0,2.0 177.7,2.3 184.5,4.3 191.2,3.1 198.0,8.8"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,27.9 12.3,21.5 22.6,22.4 32.9,10.1 43.3,12.7 53.6,13.9 63.9,2.0 74.2,6.6 84.5,7.7 94.8,6.8 105.2,6.8 115.5,38.0 125.8,32.3 136.1,28.1 146.4,37.3 156.7,24.5 167.1,8.5 177.4,8.1 187.7,14.1 198.0,9.8"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>xgboost</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">8542.0786</td>
+<td class="muted">2026-06-05</td>
+<td class="num">8590.13</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 xgboost）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>0</strong> 次 · 准确率 <strong>0%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>8542.08</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>8542.08</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>8542.08</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>8542.08</td><td><span class="hit-no">✗</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> TS-L01</td>
+<td>国家统计局国民经济运行情况</td>
+<td class="ind-explain">高技术产业投资同比增速（含制造业与服务业子项披露） （累计同比（%）/月 · 固定资产投资（不含农户）高技术产业口径） 国家统计局《1—2月份国民经济运行情况》新闻稿投资段：摘录「高技术产业投资同比增长…其中…信息服务业投资…研发与设计服务业投资…」等可复核句子（原「高技术服务业固投」在月度主新闻稿中常与高技术产业投资合并披露，故主链改为该公开段落口径）。</td>
+<td class="num">1.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> TS-L02</td>
+<td>工信部互联网和相关服务业</td>
+<td class="ind-explain">规模以上互联网企业完成互联网业务收入累计同比 （累计同比（%）/月 · 规模以上互联网和相关服务企业） 工信部《互联网和相关服务业运行情况》通稿主文。</td>
+<td class="num">9%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">1.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,24.0 40.7,25.1 79.3,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> TS-L03</td>
+<td>工信部通信业</td>
+<td class="ind-explain">电信业务总量同比（不变价） （同比（%）/月 · 通信业统计公报） 工信部通信业运行通报主文。</td>
+<td class="num">8.4</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">9.1</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,28.1 40.7,30.0 79.3,2.0 118.0,15.1"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> TS-C01</td>
+<td>同 AI-C01</td>
+<td class="ind-explain">同 AI-C01 （同 AI-C01 · 同 AI-C01） 引用 AI-C01 同源。</td>
+<td class="num">11.7%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">11.6%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,29.2 21.3,30.0 40.7,13.5 60.0,2.0 79.3,2.8 98.7,16.0 118.0,15.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> TS-C02</td>
+<td>工信部软件业附表</td>
+<td class="ind-explain">信息技术服务收入增速 （累计同比（%）/月 · 软件业分业务） 软件业通稿附表「信息技术服务收入」行。</td>
+<td class="num">13.1%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">13%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,25.5 21.3,30.0 40.7,13.5 60.0,2.6 79.3,2.0 98.7,12.8 118.0,12.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> TS-C03</td>
+<td>同 AI-C03</td>
+<td class="ind-explain">同 AI-C03 （同 AI-C03 · 同 AI-C03） 引用 AI-C03 同源。</td>
+<td class="num">10.9%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> TS-K01</td>
+<td>同 TS-L02</td>
+<td class="ind-explain">互联网企业业务收入增速——K 层解读为科技服务下游需求景气度，反映企业数字化支出意愿。 （累计同比（%）/月 · 互联网业务收入（K 层重标：科技服务下游景气）） alias_reference → TS-L02；K 层重标为下游需求景气锚。</td>
+<td class="num">9%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">1.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,24.0 40.7,25.1 79.3,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> TS-K02</td>
+<td>同 TS-C02</td>
+<td class="ind-explain">信息技术服务收入增速——K 层解读为在岸科技服务合同落地量，增速走强意味着外溢订单正转化为实体收入。 （累计同比（%）/月 · 信息技术服务收入（K 层重标：在岸服务落地量）） alias_reference → TS-C02；K 层重标为在岸服务落地锚。</td>
+<td class="num">13.1%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">13%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,25.5 21.3,30.0 40.7,13.5 60.0,2.6 79.3,2.0 98.7,12.8 118.0,12.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> TS-K03</td>
+<td>同 TS-L01</td>
+<td class="ind-explain">高技术产业投资增速——K 层解读为科技基础设施投资强度，是科技服务供给侧的产能扩张锚。 （累计同比（%）/月 · 高技术产业投资（K 层重标：科技基础设施投资）） alias_reference → TS-L01；K 层重标为供给侧产能锚。</td>
+<td class="num">6.1%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">1.6%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> TS-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证信息技术指数 — 选取信息技术相关代表性公司；作为科技服务赛道的市场定价反馈。 （收盘价/日（月频落盘） · 中证信息技术指数 (000935.SH)） Tushare index_daily(ts_code=&#x27;000935.SH&#x27;) 取最近交易日 close。</td>
+<td class="num">8,542.08</td>
+<td class="muted">20260529</td>
+<td class="muted">8,903.09</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,26.6 10.9,18.7 19.8,26.7 28.8,30.0 37.7,26.2 46.6,21.1 55.5,16.9 64.5,24.0 73.4,13.9 82.3,2.0 91.2,2.5 100.2,6.4 109.1,4.0 118.0,14.8"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> TS-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证信息技术指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证信息技术指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;000935.SH&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">66.70x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">65.90x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 10.9,5.6 19.8,6.4 28.8,5.7 37.7,5.7 46.6,30.0 55.5,25.6 64.5,22.3 73.4,29.4 82.3,19.5 91.2,7.1 100.2,6.7 109.1,11.4 118.0,8.1"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> TS-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">纳斯达克综合指数 — 以 Nasdaq Composite 作为 NDX 的可获得替代锚；偏软但覆盖大型科技服务标的（偏差：较 NDX 更宽，标注为宽锚替代）。 （收盘价/日（月频落盘） · 纳斯达克综合指数 (IXIC/NDX)） akshare index_global_spot_em() 筛选「纳斯达克」取最新价；失败回退 Tushare index_global(IXIC)。</td>
+<td class="num">26,917.47</td>
+<td class="muted">20260528</td>
+<td class="muted">26,674.73</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,19.9 10.9,19.2 19.8,24.2 28.8,15.8 37.7,9.5 46.6,20.5 55.5,24.1 64.5,30.0 73.4,19.3 82.3,18.7 91.2,17.3 100.2,9.0 109.1,8.5 118.0,2.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T03" class="sector-section">
+<h2>T03 集成电路</h2>
+<div class="sector-meta"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证半导体（H30184.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>13657.1611</div></div>
+  <div class="val-item"><label>PE TTM</label><div>120.07</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>84%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>定价不足</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↑ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,37.0 15.5,36.5 22.3,35.2 29.0,36.2 35.8,34.2 42.6,35.5 49.3,34.2 56.1,30.5 62.8,31.4 69.6,31.5 76.3,27.4 83.1,22.7 89.9,21.0 96.6,23.4 103.4,17.8 110.1,17.3 116.9,14.3 123.7,16.4 130.4,16.9 137.2,15.8 143.9,12.4 150.7,7.6 157.4,12.3 164.2,9.5 171.0,2.0 177.7,3.4 184.5,5.9 191.2,4.3 198.0,10.6"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 12.3,35.3 22.6,37.7 32.9,31.5 43.3,34.7 53.6,30.1 63.9,19.0 74.2,22.1 84.5,24.1 94.8,17.0 105.2,17.0 115.5,33.5 125.8,26.0 136.1,15.0 146.4,25.2 156.7,19.4 167.1,2.0 177.4,3.5 187.7,10.8 198.0,7.6"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>linear</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">13657.1611</td>
+<td class="muted">2026-06-05</td>
+<td class="num">13827.34</td>
+<td><span class="dir-up">↑</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>0</strong> 次 · 准确率 <strong>0%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>13657.16</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>13657.16</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>13657.16</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>13657.16</td><td><span class="hit-no">✗</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> IC-L01</td>
+<td>工信部软件业附表</td>
+<td class="ind-explain">集成电路设计收入增速 （累计同比（%）/月 · 软件业集成电路设计收入子项） 软件业通稿附表「集成电路设计收入」行。</td>
+<td class="num">15.7%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">14%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,25.8 21.3,2.0 40.7,21.6 60.0,25.6 79.3,21.4 98.7,30.0 118.0,27.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> IC-L02</td>
+<td>中芯国际年报</td>
+<td class="ind-explain">龙头晶圆厂资本开支（以中芯国际为主锚） （绝对额/年 · A+H 龙头晶圆厂合并报表资本开支） 中芯国际年报「资本开支」科目；可选补充华虹半导体等，须在字典锁定是否纳入面板。</td>
+<td class="num">73.3</td>
+<td class="muted">2024年</td>
+<td class="muted">74.7</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,2.0 118.0,5.5"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> IC-L03</td>
+<td>同 AI-L02</td>
+<td class="ind-explain">同 AI-L02 （同 AI-L02 · 同 AI-L02） 引用 AI-L02 同源。</td>
+<td class="num">116.21 十亿美元</td>
+<td class="muted">2026-03</td>
+<td class="muted">101.56 十亿美元</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,13.6 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IC-C01</td>
+<td>同 AI-C02</td>
+<td class="ind-explain">同 AI-C02 （同 AI-C02 · 同 AI-C02） 引用 AI-C02 同源。</td>
+<td class="num">24.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">12.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IC-C02_AMT</td>
+<td>海关总署统计快讯</td>
+<td class="ind-explain">集成电路进口金额同比 （累计同比（%）/月 · 海关进口商品量值（人民币）） 海关《进口重点商品量值表》HTML「集成电路」行金额列累计同比（`customs_import_key_commodity_html_table`）。</td>
+<td class="num">39.8</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">2.7</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 40.7,11.9 79.3,19.7 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IC-C02_QTY</td>
+<td>海关总署统计快讯</td>
+<td class="ind-explain">集成电路进口数量同比 （累计同比（%）/月 · 海关进口商品量值） 同一 HTML 表「集成电路」行数量列累计同比（`customs_import_key_commodity_html_table`）。</td>
+<td class="num">9</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">16.8</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 40.7,2.0 79.3,2.0 118.0,9.4"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IC-C03</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">高技术制造业增加值同比 （当月同比（%）/月 · 规模以上工业分行业增加值） 工业增加值分行业表「其中：高技术制造业」行。</td>
+<td class="num">12.6%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">13.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IC-K01</td>
+<td>同 IC-L01</td>
+<td class="ind-explain">集成电路设计收入增速——K 层解读为 IC 设计环节的产业核心景气锚，领先于制造/封测 1-2 个季度。 （累计同比（%）/月 · 集成电路设计收入（K 层重标：设计环节景气锚）） alias_reference → IC-L01；K 层重标为设计景气锚。</td>
+<td class="num">15.7%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">14%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,25.8 21.3,2.0 40.7,21.6 60.0,25.6 79.3,21.4 98.7,30.0 118.0,27.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IC-K02</td>
+<td>同 IC-C01</td>
+<td class="ind-explain">集成电路产量同比——K 层解读为 IC 制造环节的产出锚，反映产能利用与需求匹配。 （当月同比（%）/月 · 集成电路产量（K 层重标：制造环节产出锚）） alias_reference → IC-C01；K 层重标为制造产出锚。</td>
+<td class="num">24.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">12.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IC-K04</td>
+<td>同 IC-C03</td>
+<td class="ind-explain">高技术制造业增加值同比——K 层解读为先进制程/高端制造的景气锚，增速走强意味着高价值环节扩张。 （当月同比（%）/月 · 高技术制造业增加值（K 层重标：先进制程景气锚）） alias_reference → IC-C03；K 层重标为先进制程景气锚。</td>
+<td class="num">12.6%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">13.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IC-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证半导体指数 — 选取半导体产业链代表性公司；完美映射 IC 赛道。 （收盘价/日（月频落盘） · 中证半导体指数 (H30184.CSI)） Tushare index_daily(ts_code=&#x27;H30184.CSI&#x27;) 取最近交易日 close。</td>
+<td class="num">13,657.16</td>
+<td class="muted">20260529</td>
+<td class="muted">14,481.21</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 10.9,24.5 19.8,28.4 28.8,29.1 37.7,27.1 46.6,21.0 55.5,12.3 64.5,20.8 73.4,15.7 82.3,2.0 91.2,4.6 100.2,9.1 109.1,6.3 118.0,17.7"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IC-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证半导体指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证半导体指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;H30184.CSI&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">120.07x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">118.57x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,17.1 10.9,19.9 19.8,21.6 28.8,15.3 37.7,15.3 46.6,30.0 55.5,23.3 64.5,13.5 73.4,22.6 82.3,17.5 91.2,2.0 100.2,3.4 109.1,9.8 118.0,7.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IC-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">iShares 半导体 ETF（SOXX）— 以可获得 SOX 替代锚覆盖半导体设计/制造/设备全链；与 T03 IC 赛道境外对照（偏差：ETF 净值 vs 指数点位，标注为替代锚）。 （收盘价/日（月频落盘） · iShares Semiconductor ETF (SOXX) — SOX 替代锚） akshare stock_us_spot_em() 筛选代码 SOXX 取最新价。</td>
+<td class="num">569.08</td>
+<td class="muted">20260529</td>
+<td class="muted">569.47</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,20.8 10.9,16.1 19.8,22.4 28.8,17.8 37.7,17.1 46.6,25.2 55.5,30.0 64.5,29.7 73.4,20.8 82.3,14.4 91.2,2.0 100.2,4.3 109.1,2.2 118.0,2.4"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T04" class="sector-section">
+<h2>T04 医药健康</h2>
+<div class="sector-meta"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证医药100（000978.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>9670.8971</div></div>
+  <div class="val-item"><label>PE TTM</label><div>22.94</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>0%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>已定价</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↑ <span class="muted">2026-06-01</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 8.8,2.0 15.5,7.0 22.3,7.8 29.0,9.4 35.8,6.6 42.6,9.2 49.3,10.7 56.1,11.5 62.8,10.5 69.6,10.8 76.3,11.2 83.1,11.0 89.9,10.3 96.6,12.1 103.4,6.3 110.1,10.0 116.9,11.8 123.7,18.1 130.4,20.8 137.2,27.1 143.9,25.1 150.7,27.5 157.4,26.3 164.2,29.1 171.0,29.5 177.7,30.9 184.5,33.2 191.2,38.0 198.0,34.1"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 12.3,2.3 22.6,3.5 32.9,2.6 43.3,3.1 53.6,3.4 63.9,5.4 74.2,3.1 84.5,2.6 94.8,3.8 105.2,3.9 115.5,27.7 125.8,26.8 136.1,29.0 146.4,27.5 156.7,31.1 167.1,32.4 177.4,32.7 187.7,33.1 198.0,38.0"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>xgboost_dir</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">9670.8971</td>
+<td class="muted">2026-06-01</td>
+<td class="num">9674.07</td>
+<td><span class="dir-up">↑</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 xgboost_dir）</h4>
+<p class="pred-note">已到期可验证 <strong>2</strong> 次 · 命中 <strong>1</strong> 次 · 准确率 <strong>50%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>9670.90</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="dir-up">↑</span></td><td class='num muted'>9670.90</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> PH-L01</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">医药制造业固定资产投资累计同比 （累计同比（%）/月 · 固定资产投资分行业） 投资新闻稿附表「医药制造业」行。</td>
+<td class="num">-7.8%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-2.8%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> PH-L02</td>
+<td>NMPA 审评审批</td>
+<td class="ind-explain">当月批准注册医疗器械件数 （计数/月 · NMPA 公告） NMPA 公告正文「批准注册…件」计数（`nmpa_notice_count_or_extract`）；`evidence_urls` 须绑当期公告详情页。</td>
+<td class="num">292</td>
+<td class="muted">2026-01</td>
+<td class="muted">312</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,21.6 60.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> PH-L03</td>
+<td>国家医保局政务公开</td>
+<td class="ind-explain">带量采购与目录调整类「重大政策文件」发布（按月计数） （事件密度/月 · 国家医保局政策与采购类文件） 国家医保局信息公开列表按关键词（国家组织药品集中采购、医保目录、谈判）计数链接条数（`nhsa_policy_publication_monthly_count`）。</td>
+<td class="num">57</td>
+<td class="muted">2024-12</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 60.0,27.1 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> PH-C01</td>
+<td>国家统计局工业利润</td>
+<td class="ind-explain">医药制造业营收/利润累计同比 （累计同比（%）/月 · 规模以上工业企业利润分行业） 工业企业利润新闻稿分行业表「医药制造业」行。</td>
+<td class="num">-0.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-0.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> PH-C02</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">化学原料和化学制品制造业增加值同比 （当月同比（%）/月 · 规模以上工业增加值分行业） 工业增加值分行业表对应行。</td>
+<td class="num">7.4%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.6%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> PH-C03</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">医药制造业工业增加值同比 （当月同比（%）/月 · 规模以上工业增加值分行业） 工业增加值分行业表「医药制造业」行。</td>
+<td class="num">5.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> PH-K01</td>
+<td>测序成本</td>
+<td class="ind-explain">人类全基因组测序成本——K 层解读为生物技术研发的边际成本锚，测序成本持续下降意味着基因组学应用门槛降低、精准医疗商业化加速。 （绝对额（美元/基因组）/年 · DNA测序成本（NHGRI/NIH）） nhgri_genome_sequencing_cost → NHGRI DNA测序成本数据集 → 提取最新年度每基因组测序成本（$）；不可达时自动回退 alias_reference → PH-L01。</td>
+<td class="num">469</td>
+<td class="muted">2023</td>
+<td class="muted">525</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 31.0,17.0 60.0,24.5 89.0,26.7 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> PH-K02</td>
+<td>同 PH-L02</td>
+<td class="ind-explain">NMPA月度批准医疗器械件数——K 层解读为监管审批节奏锚，批准数上升意味着产业商业化通道在拓宽。 （计数/月 · NMPA批准器械（K 层重标：监管审批节奏锚）） alias_reference → PH-L02；K 层重标为审批节奏锚。</td>
+<td class="num">292</td>
+<td class="muted">2026-01</td>
+<td class="muted">312</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,21.6 60.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> PH-K03</td>
+<td>同 PH-C01</td>
+<td class="ind-explain">医药制造业营收增速——K 层解读为行业收入锚，营收走弱但 PE 高企时估值压力最大。 （累计同比（%）/月 · 医药制造业营收（K 层重标：行业收入锚）） alias_reference → PH-C01；K 层重标为行业收入锚。</td>
+<td class="num">-0.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-0.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> PH-K04</td>
+<td>大宗商品现货价</td>
+<td class="ind-explain">碳酸锂(电池级)基准价——K 层解读为医药上游锂盐/原料药成本锚，价格下行有利于降低含锂原料药及医药中间体生产成本。 （绝对额（元/吨）/日 · 碳酸锂(电池级)基准价（生意社）） sunsirs_lithium_carbonate_spot → 生意社碳酸锂新闻列表页 → 自动进入最新基准价详情页 → 正则提取电池级基准价（元/吨），电池级不可得时回退工业级。</td>
+<td class="num">78,250</td>
+<td class="muted">2025-11-01</td>
+<td class="muted">81,500</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 60.0,16.9 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> PH-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证医药100指数 — 选取医药健康行业代表性公司；医药赛道全链条市场定价反馈。 （收盘价/日（月频落盘） · 中证医药100指数 (000978.CSI)） Tushare index_daily(ts_code=&#x27;000978.CSI&#x27;) 取最近交易日 close。</td>
+<td class="num">9,670.90</td>
+<td class="muted">20260529</td>
+<td class="muted">9,555.52</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 10.9,3.9 19.8,10.1 28.8,12.8 37.7,19.1 46.6,17.1 55.5,19.5 64.5,18.3 73.4,21.2 82.3,21.5 91.2,22.9 100.2,25.2 109.1,30.0 118.0,26.2"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> PH-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证医药100指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证医药100指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;000978.SH&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">22.94x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">23.37x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,4.3 10.9,2.5 19.8,2.0 28.8,3.0 37.7,3.1 46.6,21.9 55.5,21.1 64.5,22.9 73.4,21.7 82.3,24.6 91.2,25.6 100.2,25.8 109.1,26.1 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> PH-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">SPDR 标普生物科技 ETF（XBI）— 以可获得 NBI 替代锚覆盖美股生物技术/制药标的；作为 T04 医药境外定价对照（偏差：ETF 净值 vs 指数点位，标注为替代锚）。 （收盘价/日（月频落盘） · SPDR S&amp;P Biotech ETF (XBI) — NBI 替代锚） akshare stock_us_spot_em() 筛选代码 XBI 取最新价。</td>
+<td class="num">136.69</td>
+<td class="muted">20260529</td>
+<td class="muted">135.99</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,7.6 14.9,19.0 27.8,27.5 40.7,30.0 53.6,16.1 66.4,16.2 79.3,11.4 92.2,8.3 105.1,4.0 118.0,2.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T05" class="sector-section">
+<h2>T05 商业航天</h2>
+<div class="sector-meta"><span class="badge" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">侧重风险</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证航空航天（H30213.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>10205.2399</div></div>
+  <div class="val-item"><label>PE TTM</label><div>71.11</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>5%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>已定价</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,12.1 8.8,12.0 15.5,10.8 22.3,5.6 29.0,7.6 35.8,8.2 42.6,8.8 49.3,14.3 56.1,14.6 62.8,21.0 69.6,20.0 76.3,16.3 83.1,12.0 89.9,10.1 96.6,3.8 103.4,2.0 110.1,5.1 116.9,3.7 123.7,12.6 130.4,17.3 137.2,17.9 143.9,18.0 150.7,20.1 157.4,24.9 164.2,24.4 171.0,23.6 177.7,28.1 184.5,31.9 191.2,30.5 198.0,38.0"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,14.1 12.3,4.6 22.6,5.8 32.9,4.8 43.3,2.8 53.6,11.0 63.9,11.0 74.2,16.5 84.5,15.8 94.8,12.3 105.2,2.0 115.5,13.0 125.8,13.2 136.1,17.1 146.4,24.8 156.7,24.5 167.1,23.6 177.4,31.0 187.7,38.0 198.0,36.4"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>linear</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">10205.2399</td>
+<td class="muted">2026-06-05</td>
+<td class="num">10103.82</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>3</strong> 次 · 准确率 <strong>75%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>10205.24</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>10205.24</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>10205.24</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>10205.24</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> AS-L01</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">运输设备制造业固定资产投资累计同比 （累计同比（%）/月 · 固定资产投资分行业） 投资附表「铁路、船舶、航空航天和其他运输设备制造业」或通稿表述。</td>
+<td class="num">24.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> AS-L02</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">航空运输业固定资产投资同比（公开主文口径） （累计同比（%）/月 · 固定资产投资基础设施分项） 投资通稿主文「基础设施投资…其中，航空运输业投资增长…」句子（`nbs_fixed_asset_investment_html_table` 正文锚）。</td>
+<td class="num">27.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> AS-L03</td>
+<td>国家统计局国民经济运行情况</td>
+<td class="ind-explain">高技术产业投资累计同比 （累计同比（%）/月 · 固定资产投资高技术产业） 国民经济运行情况新闻稿投资段「高技术产业投资同比增长…」。</td>
+<td class="num">1.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AS-C01</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">运输设备制造业增加值同比 （当月同比（%）/月 · 规模以上工业增加值分行业） 工业增加值分行业表对应行。</td>
+<td class="num">12.1%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">13.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AS-C02</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">制造业技术改造投资累计同比 （累计同比（%）/月 · 制造业技术改造投资） 月度投资附表无独立「制造业技术改造投资」行时，以同表「设备工器具购置」累计同比作可复核代理（`nbs_fixed_asset_investment_html_table`）。</td>
+<td class="num">11.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> AS-C03</td>
+<td>同 AS-L03</td>
+<td class="ind-explain">同 AS-L03 （同 AS-L03 · 同 AS-L03） 引用 AS-L03 同源。</td>
+<td class="num">1.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AS-K01</td>
+<td>发射成本</td>
+<td class="ind-explain">SpaceX Rideshare Transporter 公开报价——K 层解读为商业发射成本地板价，$/kg 持续下降意味着进入太空的边际成本在降低、商业航天可及性在提高。 （绝对额（美元/kg 或 美元/任务）/季度 · SpaceX Rideshare 发射公开报价） spacex_rideshare_pricing → SpaceX 官网 Rideshare 页面 → 提取 $/kg 或 $/mission 公开报价；不可达时自动回退 alias_reference → AS-L01。</td>
+<td class="num">3,500</td>
+<td class="muted">2024</td>
+<td class="muted">5,000</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AS-K02</td>
+<td>同 AS-C01</td>
+<td class="ind-explain">航空航天器制造业增加值——K 层解读为航天制造景气锚，反映卫星/火箭/载荷的当期产出强度。 （当月同比（%）/月 · 航空航天器增值（K 层重标：制造景气锚）） alias_reference → AS-C01；K 层重标为制造景气锚。</td>
+<td class="num">12.1%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">13.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AS-K03</td>
+<td>同 AS-L02</td>
+<td class="ind-explain">航空运输业固投增速——K 层解读为低空经济基建锚，增速走高意味着起降场/空管/飞行服务站等硬件投资正在铺开。 （累计同比（%）/月 · 航空运输业投资（K 层重标：低空经济基建锚）） alias_reference → AS-L02；K 层重标为低空基建锚。</td>
+<td class="num">27.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> AS-K04</td>
+<td>同 AS-C02</td>
+<td class="ind-explain">铁路船舶航空航天运输设备增值——K 层解读为航天/低空全链当期产出锚，覆盖制造+服务环节。 （累计同比（%）/月 · 运输设备增值（K 层重标：全链产出锚）） alias_reference → AS-C02；K 层重标为全链产出锚。</td>
+<td class="num">11.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> AS-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证航空航天指数 — 选取航空航天产业链代表性公司；较中证军工更贴近商业航天/低空装备叙事（仍非纯商业航天主题，须在对外稿披露口径）。 （收盘价/日（月频落盘） · 中证航空航天指数 (H30213.CSI)） Tushare index_daily(ts_code=&#x27;H30213.CSI&#x27;) 取最近交易日 close。</td>
+<td class="num">10,205.24</td>
+<td class="muted">20260529</td>
+<td class="muted">10,680.75</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,3.2 10.9,2.0 19.8,9.3 28.8,13.1 37.7,13.6 46.6,13.6 55.5,15.4 64.5,19.3 73.4,18.9 82.3,18.2 91.2,21.9 100.2,25.0 109.1,23.9 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> AS-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证航空航天指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证航空航天指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;H30213.CSI&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">71.11x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">70.74x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,9.0 10.9,13.3 19.8,12.8 28.8,10.0 37.7,2.0 46.6,10.6 55.5,10.7 64.5,13.8 73.4,19.7 82.3,19.5 91.2,18.8 100.2,24.5 109.1,30.0 118.0,28.7"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T06" class="sector-section">
+<h2>T06 工业软件与工业智能</h2>
+<div class="sector-meta"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证工业互联网主题指数（931495.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>4027.8437</div></div>
+  <div class="val-item"><label>PE TTM</label><div>39.14</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>25%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>已定价</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,34.9 15.5,34.1 22.3,31.6 29.0,32.1 35.8,27.7 42.6,28.3 49.3,29.5 56.1,25.8 62.8,28.3 69.6,26.4 76.3,26.3 83.1,20.0 89.9,16.6 96.6,16.6 103.4,11.1 110.1,14.1 116.9,9.6 123.7,15.0 130.4,16.1 137.2,13.0 143.9,8.6 150.7,6.7 157.4,12.9 164.2,8.0 171.0,2.0 177.7,3.4 184.5,5.7 191.2,5.1 198.0,12.2"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,11.5 12.3,10.9 22.6,9.8 32.9,4.9 43.3,4.6 53.6,6.2 63.9,2.8 74.2,5.0 84.5,2.0 94.8,4.9 105.2,4.9 115.5,36.1 125.8,33.3 136.1,32.8 146.4,38.0 156.7,34.4 167.1,30.1 177.4,31.4 187.7,31.6 198.0,28.9"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>linear</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">4027.8437</td>
+<td class="muted">2026-06-05</td>
+<td class="num">4018.47</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>3</strong> 次 · 准确率 <strong>75%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>4027.84</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>4027.84</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>4027.84</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>4027.84</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> IS-L01</td>
+<td>国家统计局 PMI</td>
+<td class="ind-explain">制造业 PMI 及新订单指数 （指数（%）/月 · 制造业 PMI） PMI 新闻稿主文与附表。</td>
+<td class="num">50.6%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">50.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> IS-L02</td>
+<td>国家统计局 PMI 解读</td>
+<td class="ind-explain">制造业生产经营活动预期指数 （指数（%）/月 · 制造业 PMI 分项） PMI 解读稿「生产经营活动预期指数」句。</td>
+<td class="num">54.5%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">53.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> IS-L03</td>
+<td>同 AS-C02</td>
+<td class="ind-explain">同 AS-C02 （同 AS-C02 · 同 AS-C02） 引用 AS-C02 同源。</td>
+<td class="num">11.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IS-C01</td>
+<td>国家统计局工业产品产量</td>
+<td class="ind-explain">工业机器人产量同比 （当月同比（%）/月 · 工业产品产量） 主要产品产量表「工业机器人」行。</td>
+<td class="num">25.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IS-C02</td>
+<td>工信部软件业附表</td>
+<td class="ind-explain">嵌入式系统软件收入增速 （累计同比（%）/月 · 软件业分业务） 软件业附表「嵌入式系统软件收入」行。</td>
+<td class="num">12.3%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">10.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,5.7 21.3,4.9 40.7,30.0 60.0,24.1 79.3,24.1 98.7,13.8 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> IS-C03</td>
+<td>工信部新闻发布会</td>
+<td class="ind-explain">重点工业企业关键工序数控化率（慢同步） （百分比/年 · 工信部智能制造通报） 以工信部新闻发布会或国务院政策例行吹风会文字实录中披露的「关键工序数控化率」为准。</td>
+<td class="num">68.6</td>
+<td class="muted">截至2025年末</td>
+<td class="muted">62.2</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,19.9 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IS-K01</td>
+<td>同 IS-L03</td>
+<td class="ind-explain">通用设备制造业固投增速——K 层解读为智能制造装备投资锚，固投加速意味着工厂自动化/数字化需求在释放。 （累计同比（%）/月 · 通用设备固投（K 层重标：智能制造装备投资锚）） alias_reference → IS-L03；K 层重标为装备投资锚。</td>
+<td class="num">11.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IS-K02</td>
+<td>同 IS-C01</td>
+<td class="ind-explain">工业机器人产量同比——K 层解读为自动化硬件产出锚，产量高增意味着工业智能的硬件基座在加速铺开。 （当月同比（%）/月 · 工业机器人产量（K 层重标：自动化硬件产出锚）） alias_reference → IS-C01；K 层重标为硬件产出锚。</td>
+<td class="num">25.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IS-K03</td>
+<td>同 RB-L02</td>
+<td class="ind-explain">金属切削机床产量同比——K 层解读为制造工具链产出锚，机床是工业母机，其产量是智能制造景气的前置信号。 （当月同比（%）/月 · 机床产量（K 层重标：制造工具链产出锚）） alias_reference → RB-L02；K 层重标为工具链产出锚。</td>
+<td class="num">4.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">4.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> IS-K04</td>
+<td>同 IS-L01</td>
+<td class="ind-explain">制造业 PMI——K 层解读为制造业整体景气锚，&gt;50 意味着工业软件与智能的采购预算仍在扩张。 （指数%/月 · 制造业PMI（K 层重标：制造业景气锚）） alias_reference → IS-L01；K 层重标为制造业景气锚。</td>
+<td class="num">50.6%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">50.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IS-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证工业互联网主题指数 — 选取工业互联网/工业自动化/智能制造代表性公司；工业软件赛道市场定价反馈。 （收盘价/日（月频落盘） · 中证工业互联网主题指数 (931495.CSI)） Tushare index_daily(ts_code=&#x27;931495.CSI&#x27;) 取最近交易日 close。</td>
+<td class="num">4,027.84</td>
+<td class="muted">20260529</td>
+<td class="muted">4,173.56</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,26.0 10.9,17.1 19.8,27.8 28.8,30.0 37.7,23.8 46.6,15.1 55.5,11.3 64.5,23.5 73.4,13.9 82.3,2.0 91.2,4.7 100.2,9.3 109.1,8.1 118.0,22.3"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IS-M02</td>
+<td>中证指数公司 / AKShare(csindex)</td>
+<td class="ind-explain">中证工业互联网主题指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证工业互联网主题指数 PE-TTM） AKShare stock_zh_index_value_csindex(symbol=&#x27;931495&#x27;) 取最近交易日 市盈率1。</td>
+<td class="num">39.14x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">38.65x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.6 10.9,4.3 19.8,2.0 28.8,4.3 37.7,4.3 46.6,28.5 55.5,26.3 64.5,26.0 73.4,30.0 82.3,27.2 91.2,23.9 100.2,24.9 109.1,25.0 118.0,22.9"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> IS-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">纳斯达克综合指数 — 以 Nasdaq Composite 作为 NDX 的可获得替代锚；作为 T06 工业软件境外宽锚定价对照（偏差：工业软件纯标的占比偏低 + 较 NDX 更宽，标注为宽锚替代）。 （收盘价/日（月频落盘） · 纳斯达克综合指数 (IXIC/NDX)） akshare index_global_spot_em() 筛选「纳斯达克」取最新价；失败回退 Tushare index_global(IXIC)。</td>
+<td class="num">26,917.47</td>
+<td class="muted">20260528</td>
+<td class="muted">26,674.73</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,19.9 10.9,19.2 19.8,24.2 28.8,15.8 37.7,9.5 46.6,20.5 55.5,24.1 64.5,30.0 73.4,19.3 82.3,18.7 91.2,17.3 100.2,9.0 109.1,8.5 118.0,2.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T07" class="sector-section">
+<h2>T07 高端科学仪器</h2>
+<div class="sector-meta"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>上证细分机械（000812.SH）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>8207.632</div></div>
+  <div class="val-item"><label>PE TTM</label><div>28</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>1%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>定价不足</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-01</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,37.6 8.8,28.8 15.5,32.8 22.3,29.0 29.0,25.7 35.8,25.6 42.6,25.5 49.3,28.2 56.1,32.3 62.8,36.3 69.6,22.4 76.3,24.1 83.1,5.6 89.9,5.5 96.6,16.3 103.4,3.9 110.1,13.3 116.9,2.0 123.7,20.0 130.4,21.5 137.2,29.2 143.9,26.2 150.7,22.1 157.4,33.1 164.2,27.0 171.0,29.3 177.7,31.1 184.5,30.1 191.2,27.1 198.0,38.0"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,3.0 12.3,2.2 22.6,2.9 32.9,2.0 43.3,2.9 53.6,3.3 63.9,3.9 74.2,4.8 84.5,4.5 94.8,4.0 105.2,32.1 115.5,37.7 125.8,37.7 136.1,37.5 146.4,37.9 156.7,37.8 167.1,37.9 177.4,38.0 187.7,37.8 198.0,37.7"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>xgboost_dir</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">8207.632</td>
+<td class="muted">2026-06-01</td>
+<td class="num">8090.83</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 xgboost_dir）</h4>
+<p class="pred-note">已到期可验证 <strong>2</strong> 次 · 命中 <strong>0</strong> 次 · 准确率 <strong>0%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>8207.63</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-27</td><td class='muted'>2026-06-03</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-up">↑</span></td><td class='num muted'>8207.63</td><td><span class="hit-no">✗</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> INS-L01</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">专用设备制造业固定资产投资累计同比 （累计同比（%）/月 · 固定资产投资分行业） 投资附表「专用设备制造业」行。</td>
+<td class="num">-6%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-0.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> INS-L02</td>
+<td>国家统计局工业解读</td>
+<td class="ind-explain">医疗仪器设备及器械产量同比（作为科学仪器与高端装备链条的国内可复核代理） （当月同比（%）/月 · 规模以上工业产量/高技术产品） 国家统计局工业司解读稿主文「医疗仪器设备及器械产量增长…」句（原 HS90 进口额因主站常 403 自动化不可复核，主链改为国内产量代理）。</td>
+<td class="num">6.3%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,8.4 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> INS-L03</td>
+<td>同 IS-C03</td>
+<td class="ind-explain">同 IS-C03 （同 IS-C03 · 同 IS-C03） 引用 IS-C03 同源。</td>
+<td class="num">68.6</td>
+<td class="muted">截至2025年末</td>
+<td class="muted">62.2</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,19.9 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> INS-C01</td>
+<td>国家统计局工业利润</td>
+<td class="ind-explain">仪器仪表制造业营业收入累计同比 （累计同比（%）/月 · 规模以上工业企业利润分行业） 利润新闻稿分行业表「仪器仪表制造业」行。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">6.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> INS-C02</td>
+<td>国家统计局工业利润</td>
+<td class="ind-explain">仪器仪表制造业利润总额累计同比 （累计同比（%）/月 · 规模以上工业企业利润分行业） 利润新闻稿分行业表「仪器仪表制造业」行。</td>
+<td class="num">-4.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-4.8%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> INS-C03</td>
+<td>国家统计局年度公报</td>
+<td class="ind-explain">R&amp;D 经费支出增速 （同比（%）/年 · 全国 R&amp;D 经费） 《全国科技经费投入统计公报》正文 R&amp;D 经费同比增长（%）（`generic_http_html_then_rule_engine` 或宏观稿 recipe）。</td>
+<td class="num">5.6%</td>
+<td class="muted">2024年</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> INS-K01</td>
+<td>同 INS-L01</td>
+<td class="ind-explain">专用设备制造业固投增速——K 层解读为科学仪器产能投资锚，负增长意味着国产仪器产能扩张放缓。 （累计同比（%）/月 · 专用设备固投（K 层重标：科学仪器产能投资锚）） alias_reference → INS-L01；K 层重标为产能投资锚。</td>
+<td class="num">-6%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-0.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> INS-K02</td>
+<td>同 INS-C01</td>
+<td class="ind-explain">仪器仪表制造业营收增速——K 层解读为科学仪器行业收入锚，营收走弱意味着下游（科研/工业）采购正在收缩。 （累计同比（%）/月 · 仪器仪表营收（K 层重标：行业收入锚）） alias_reference → INS-C01；K 层重标为行业收入锚。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">6.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> INS-K03</td>
+<td>同 INS-L02</td>
+<td class="ind-explain">医疗仪器设备及器械产量同比——K 层解读为高端设备产出锚，作为科学仪器与高端装备产业链的国内可复核代理指标。 （当月同比（%）/月 · 医疗仪器产量（K 层重标：高端设备产出锚）） alias_reference → INS-L02；K 层重标为高端设备产出锚。</td>
+<td class="num">18.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">15.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,8.4 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> INS-K04</td>
+<td>同 INS-C02</td>
+<td class="ind-explain">仪器仪表制造业利润增速——K 层解读为科学仪器盈利锚，利润为负但营收正增长意味着行业在价格战中压缩毛利。 （累计同比（%）/月 · 仪器仪表利润（K 层重标：行业盈利锚）） alias_reference → INS-C02；K 层重标为行业盈利锚。</td>
+<td class="num">-4.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-4.8%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> INS-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">上证细分机械指数 — A 股无科学仪器主题指数时的行情代理；产业读数以仪器仪表制造业 INS-C* 为准（偏差：机械≠仪器，对外须披露）。 （收盘价/日（月频落盘） · 上证细分机械指数 (000812.SH)） Tushare index_daily(ts_code=&#x27;000812.SH&#x27;) 取最近交易日 close。</td>
+<td class="num">8,207.63</td>
+<td class="muted">20260529</td>
+<td class="muted">8,366.74</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,10.8 10.9,2.0 19.8,16.0 28.8,17.2 37.7,23.2 46.6,20.8 55.5,17.6 64.5,26.2 73.4,21.4 82.3,23.2 91.2,24.6 100.2,23.9 109.1,21.5 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> INS-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">上证细分机械指数 PE-TTM；历史分位用于判断定价水位（代理口径同 M-01）。 （PE-TTM/日（月频落盘） · 上证细分机械指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;000812.SH&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">28.00x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">27.87x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 10.9,2.7 19.8,2.5 28.8,2.1 37.7,25.2 46.6,29.8 55.5,29.7 64.5,29.6 73.4,29.9 82.3,29.9 91.2,29.9 100.2,30.0 109.1,29.9 118.0,29.8"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T08" class="sector-section">
+<h2>T08 量子计算</h2>
+<div class="sector-meta"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">不适用—无市场指数锚</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证TMT（已停用·仅档案）（000998.CSI）</strong> · 数据日 20260522</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>3823.0871</div></div>
+  <div class="val-item"><label>PE TTM</label><div>57.61</div></div>
+  <div class="val-item val-item-wide"><label>PE 历史分位</label><div class="muted">不适用—无市场指数锚</div><small class="muted">请读 L/C/K 与企业专档</small></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>— <span class="muted"></span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,37.9 15.5,35.9 22.3,35.1 29.0,32.9 35.8,34.7 42.6,32.6 49.3,30.9 56.1,27.9 62.8,29.0 69.6,24.8 76.3,25.7 83.1,26.3 89.9,22.3 96.6,24.9 103.4,23.9 110.1,22.0 116.9,17.0 123.7,13.5 130.4,13.5 137.2,8.2 143.9,8.5 150.7,3.9 157.4,7.8 164.2,10.2 171.0,7.6 177.7,3.5 184.5,2.0 191.2,8.4 198.0,3.0"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 41.2,26.7 80.4,28.2 119.6,2.0 158.8,6.0 198.0,14.9"/></svg><span class="spark-label">近6期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+<p class="muted">暂无 T+5 方向预测</p>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note muted">尚无已到期的 T+5 预测；目标日满 5 个<strong>交易日</strong>后回填（非自然日；例：5/22 基准的 T+5 为 5/29，5/27 为 T+3 不用于 T+5 评估）</p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> QC-L01</td>
+<td>国家统计局工业解读</td>
+<td class="ind-explain">电子工业专用设备制造行业增加值同比 （当月同比（%）/月 · 规模以上工业分行业中类） 国家统计局工业司解读稿主文该行业增速句。</td>
+<td class="num">6.3%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,8.4 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> QC-L02</td>
+<td>国家统计局 PMI 解读</td>
+<td class="ind-explain">高技术制造业 PMI （指数（%）/月 · 高技术制造业 PMI） PMI 解读稿「高技术制造业 PMI」句。</td>
+<td class="num">52.2%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">52.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> QC-L03</td>
+<td>国家统计局工业产品产量</td>
+<td class="ind-explain">移动通信手持机/智能手机产量同比 （当月同比（%）/月 · 工业产品产量） 主要产品产量表对应行。</td>
+<td class="num">0.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> QC-C01</td>
+<td>国家统计局国民经济运行情况</td>
+<td class="ind-explain">高技术制造业投资累计同比 （累计同比（%）/月 · 高技术产业投资） 国民经济运行情况新闻稿投资段「高技术产业投资同比增长…」（与高技术产业投资同段披露，脚本取主锚数值）。</td>
+<td class="num">1.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> QC-C02</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">计算机通信和其他电子设备制造业增加值同比 （当月同比（%）/月 · 工业增加值分行业） 工业增加值分行业表对应行。</td>
+<td class="num">14%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">14.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> QC-C03</td>
+<td>国家统计局工业解读</td>
+<td class="ind-explain">高技术制造业增加值同比 （当月同比（%）/月 · 工业增加值高技术制造业） 解读稿与分行业表交叉核对。</td>
+<td class="num">13.1%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,16.8 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> QC-K01</td>
+<td>同 QC-L01</td>
+<td class="ind-explain">电子工业专用设备制造业增加值——K 层解读为量子计算相关硬件设备（稀释制冷机/测控系统等）的当期产出锚。 （当月同比（%）/月 · 电子专用设备增值（K 层重标：量子硬件设备锚）） alias_reference → QC-L01；K 层重标为硬件设备锚。</td>
+<td class="num">18.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">15.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 60.0,8.4 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> QC-K02</td>
+<td>同 QC-C02</td>
+<td class="ind-explain">电子及通信设备制造业增加值——K 层解读为量子计算相关电子制造景气锚，覆盖超导/光子/离子阱等多种路线的上游电子供应链。 （当月同比（%）/月 · 电子通信制造业增值（K 层重标：量子相关电子制造锚）） alias_reference → QC-C02；K 层重标为电子制造景气锚。</td>
+<td class="num">14%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">14.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> QC-K03</td>
+<td>同 QC-L02</td>
+<td class="ind-explain">高技术制造业 PMI——K 层解读为量子相关高端制造的景气锚，&gt;50 意味着相关产业仍在扩张。 （指数%/月 · 高技术制造业PMI（K 层重标：高技术制造景气锚）） alias_reference → QC-L02；K 层重标为高技术制造景气锚。</td>
+<td class="num">52.2%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">52.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> QC-K04</td>
+<td>同 QC-L03</td>
+<td class="ind-explain">智能手机产量同比——K 层解读为消费电子供应链景气锚，反映量子计算所依赖的先进封装/芯片制造等共享供应链的健康度。 （当月同比（%）/月 · 智能手机产量（K 层重标：消费电子供应链锚）） alias_reference → QC-L03；K 层重标为消费电子供应链锚。</td>
+<td class="num">0.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T09" class="sector-section">
+<h2>T09 具身智能</h2>
+<div class="sector-meta"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">定价不足</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证机器人（H30590.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>2097.785</div></div>
+  <div class="val-item"><label>PE TTM</label><div>60.14</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>76%</strong> <span class="muted">PE 近20期窗口内位置</span></div><small class="muted">20 期样本 · 与下方近20期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>定价不足</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-05</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,34.9 15.5,33.6 22.3,32.2 29.0,33.1 35.8,31.7 42.6,32.8 49.3,34.1 56.1,30.3 62.8,33.5 69.6,31.9 76.3,30.1 83.1,26.3 89.9,20.0 96.6,15.9 103.4,12.8 110.1,14.7 116.9,10.7 123.7,14.9 130.4,9.5 137.2,6.6 143.9,4.2 150.7,5.2 157.4,5.7 164.2,2.7 171.0,2.0 177.7,3.2 184.5,9.5 191.2,9.3 198.0,16.7"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,36.5 12.3,35.1 22.6,36.1 32.9,34.3 43.3,36.3 53.6,38.0 63.9,33.1 74.2,37.1 84.5,34.0 94.8,32.3 105.2,32.8 115.5,8.8 125.8,6.2 136.1,7.1 146.4,7.2 156.7,2.9 167.1,2.0 177.4,3.4 187.7,10.8 198.0,10.8"/></svg><span class="spark-label">近20期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>arima</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">2097.785</td>
+<td class="muted">2026-06-05</td>
+<td class="num">2097.78</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 arima）</h4>
+<p class="pred-note">已到期可验证 <strong>4</strong> 次 · 命中 <strong>3</strong> 次 · 准确率 <strong>75%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>2097.78</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-26</td><td class='muted'>2026-06-02</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>2097.78</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>2097.78</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>2097.78</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> RB-L01</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">通用设备制造业固定资产投资累计同比 （累计同比（%）/月 · 制造业固定资产投资） 投资附表「通用设备制造业」行（装备投资宽锚，替代不可稳定复核的「主机厂指引」）。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> RB-L02</td>
+<td>国家统计局工业产品产量</td>
+<td class="ind-explain">金属切削机床产量同比 （当月同比（%）/月 · 工业产品产量） 主要产品产量表「金属切削机床」行。</td>
+<td class="num">4.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">4.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> RB-L03</td>
+<td>同 IS-L01</td>
+<td class="ind-explain">制造业 PMI 新订单指数 （同 IS-L01 新订单 · 同 IS-L01） 引用 IS-L01 同源。</td>
+<td class="num">50.6%</td>
+<td class="muted">2026年4月</td>
+<td class="muted">50.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> RB-C01</td>
+<td>同 IS-C01</td>
+<td class="ind-explain">同 IS-C01 （同 IS-C01 · 同 IS-C01） 引用 IS-C01 同源。</td>
+<td class="num">25.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> RB-C02</td>
+<td>工信部装备工业一司汽车工业</td>
+<td class="ind-explain">新能源汽车产量及同比（汽车工业统计口径） （累计产量/月 · 汽车工业经济运行） 工信部《汽车工业经济运行情况》通稿主文产量段。</td>
+<td class="num">8.8%</td>
+<td class="muted">2026年2月</td>
+<td class="muted">12.3%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 31.0,14.1 60.0,18.0 89.0,26.3 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> RB-C03</td>
+<td>同 QC-C01</td>
+<td class="ind-explain">同 QC-C01 （同 QC-C01 · 同 QC-C01） 引用 QC-C01 同源。</td>
+<td class="num">1.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,2.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> RB-K01</td>
+<td>同 RB-L01</td>
+<td class="ind-explain">通用设备制造业固投增速——K 层解读为机器人/自动化装备投资锚，固投加速意味着工厂对人形/工业机器人的capex意愿在上升。 （累计同比（%）/月 · 通用设备固投（K 层重标：机器人装备投资锚）） alias_reference → RB-L01；K 层重标为装备投资锚。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> RB-K02</td>
+<td>同 RB-C01</td>
+<td class="ind-explain">工业机器人产量同比——K 层解读为机器人当期产出锚，产量是具身智能产业链上最直接的可复核硬指标。 （当月同比（%）/月 · 工业机器人产量（K 层重标：机器人产出锚）） alias_reference → RB-C01；K 层重标为机器人产出锚。</td>
+<td class="num">25.7%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">31.1%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> RB-K03</td>
+<td>同 RB-L02</td>
+<td class="ind-explain">金属切削机床产量同比——K 层解读为精密制造供给锚，机床是机器人减速器/伺服电机等核心零部件的制造基础。 （当月同比（%）/月 · 机床产量（K 层重标：精密制造供给锚）） alias_reference → RB-L02；K 层重标为精密制造供给锚。</td>
+<td class="num">4.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">4.2%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> RB-K04</td>
+<td>同 RB-C02</td>
+<td class="ind-explain">新能源汽车产量——K 层解读为机器人的最大单一终端应用需求锚，汽车制造是工业机器人最大的下游市场。 （累计产量/月 · 新能源汽车产量（K 层重标：终端应用需求锚）） alias_reference → RB-C02；K 层重标为终端需求锚。</td>
+<td class="num">8.8%</td>
+<td class="muted">2026年2月</td>
+<td class="muted">12.3%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 31.0,14.1 60.0,18.0 89.0,26.3 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> RB-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证机器人指数 — 选取机器人/自动化产业链代表性公司；具身智能赛道市场定价反馈。 （收盘价/日（月频落盘） · 中证机器人指数 (H30590.CSI)） Tushare index_daily(ts_code=&#x27;H30590.CSI&#x27;) 取最近交易日 close。</td>
+<td class="num">2,097.78</td>
+<td class="muted">20260529</td>
+<td class="muted">2,187.36</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,26.1 10.9,18.4 19.8,26.4 28.8,16.2 37.7,10.7 46.6,6.1 55.5,8.1 64.5,9.0 73.4,3.3 82.3,2.0 91.2,4.2 100.2,16.2 109.1,15.8 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> RB-M02</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证机器人指数 PE-TTM；历史分位用于判断定价水位。 （PE-TTM/日（月频落盘） · 中证机器人指数 PE-TTM） Tushare index_dailybasic(ts_code=&#x27;H30590.CSI&#x27;) 取最近交易日 pe_ttm。</td>
+<td class="num">60.14x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">60.15x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,26.8 10.9,30.0 19.8,27.6 28.8,26.2 37.7,26.6 46.6,7.4 55.5,5.3 64.5,6.1 73.4,6.2 82.3,2.7 91.2,2.0 100.2,3.1 109.1,9.0 118.0,9.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> RB-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">Global X Robotics &amp; AI ETF — 全球机器人与人工智能主题 ETF；作为 T09 具身智能境外定价对照（机器人+自动化主题对标）。 （收盘价/日（月频落盘） · Global X Robotics &amp; AI ETF (BOTZ)） akshare stock_us_spot_em() 筛选代码 BOTZ 取最新价。</td>
+<td class="num">40.15</td>
+<td class="muted">20260529</td>
+<td class="muted">40.28</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,3.8 10.9,5.3 19.8,11.3 28.8,2.0 37.7,7.2 46.6,16.3 55.5,20.4 64.5,30.0 73.4,26.3 82.3,15.7 91.2,9.5 100.2,17.9 109.1,15.8 118.0,17.1"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T10" class="sector-section">
+<h2>T10 脑机接口</h2>
+<div class="sector-meta"><span class="badge" style="background:#eab30822;color:#eab308;border:1px solid #eab30855">均衡观察</span><span class="badge" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">不适用—无市场指数锚</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证医疗保健（已停用·仅档案）（H30178.CSI）</strong> · 数据日 20260522</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>13079.0844</div></div>
+  <div class="val-item"><label>PE TTM</label><div>29.21</div></div>
+  <div class="val-item val-item-wide"><label>PE 历史分位</label><div class="muted">不适用—无市场指数锚</div><small class="muted">请读 L/C/K 与企业专档</small></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>— <span class="muted"></span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,9.2 8.8,22.6 15.5,17.7 22.3,25.6 29.0,22.7 35.8,23.1 42.6,20.2 49.3,24.9 56.1,19.0 62.8,20.1 69.6,13.4 76.3,15.5 83.1,16.1 89.9,19.6 96.6,22.0 103.4,19.3 110.1,21.6 116.9,18.2 123.7,15.1 130.4,9.6 137.2,2.0 143.9,10.2 150.7,8.5 157.4,20.9 164.2,25.1 171.0,33.6 177.7,27.3 184.5,37.4 191.2,38.0 198.0,37.9"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 41.2,20.6 80.4,19.4 119.6,2.0 158.8,2.6 198.0,3.9"/></svg><span class="spark-label">近6期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+<p class="muted">暂无 T+5 方向预测</p>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 linear）</h4>
+<p class="pred-note muted">尚无已到期的 T+5 预测；目标日满 5 个<strong>交易日</strong>后回填（非自然日；例：5/22 基准的 T+5 为 5/29，5/27 为 T+3 不用于 T+5 评估）</p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-23</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> BCI-L01</td>
+<td>NMPA</td>
+<td class="ind-explain">创新医疗器械相关公告件数（标题含「创新医疗器械」或「特别审查」） （计数/月 · NMPA 创新医疗器械子集） NMPA 列表页按标题关键字过滤计数（与 PH-L02 同站；规则锁定于 recipe）。</td>
+<td class="num">7</td>
+<td class="muted">2026-01</td>
+<td class="muted">12</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,18.8 60.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> BCI-L02</td>
+<td>同 QC-L03</td>
+<td class="ind-explain">智能手机产量同比 （同 QC-L03 智能手机 · 同 QC-L03） 引用 QC-L03 同源。</td>
+<td class="num">0.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> BCI-L03</td>
+<td>国家统计局工业解读</td>
+<td class="ind-explain">生物药品制品制造行业增加值同比（脑科学相关制药宽锚） （同比（%）/月 · 医药制造业增加值） 国家统计局工业司解读稿主文行业增速列表中「生物药品制品制造」句。</td>
+<td class="num">25.5%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 60.0,30.0 118.0,22.4"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> BCI-C01</td>
+<td>国家统计局工业利润</td>
+<td class="ind-explain">医疗仪器设备及器械制造营收/利润累计同比 （累计同比（%）/月 · 规模以上工业企业利润分行业） 利润新闻稿分行业表「医疗仪器设备及器械制造业」行（`nbs_industry_profit_html_table`）。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">6.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> BCI-C02</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">卫生和社会工作行业固定资产投资累计同比 （累计同比（%）/月 · 固定资产投资分行业） 投资附表「卫生和社会工作」行。</td>
+<td class="num">-10.9%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">-8%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> BCI-C03</td>
+<td>同 PH-C01</td>
+<td class="ind-explain">医药制造业营业收入累计同比 （同 PH-C01 营收增速 · 同 PH-C01） 引用 PH-C01 营收增速句。</td>
+<td class="num">5.6%</td>
+<td class="muted">2026年1—2月</td>
+<td class="muted">—</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> BCI-K01</td>
+<td>同 BCI-L01</td>
+<td class="ind-explain">创新医疗器械公告件数——K 层解读为脑机接口监管通道锚，NMPA 对创新器械的审批节奏直接决定 BCI 产品的上市速度。 （计数/月 · 创新医疗器械公告（K 层重标：BCI监管通道锚）） alias_reference → BCI-L01；K 层重标为监管通道锚。</td>
+<td class="num">7</td>
+<td class="muted">2026-01</td>
+<td class="muted">12</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,18.8 60.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> BCI-K02</td>
+<td>同 BCI-L02</td>
+<td class="ind-explain">智能手机产量同比——K 层解读为消费级神经接口硬件（非侵入式 BCI 头戴设备等）的共享供应链景气锚。 （当月同比（%）/月 · 智能手机产量（K 层重标：消费级神经接口锚）） alias_reference → BCI-L02；K 层重标为消费级接口锚。</td>
+<td class="num">0.3%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">7.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> BCI-K03</td>
+<td>同 BCI-L03</td>
+<td class="ind-explain">生物药品制品制造业增加值——K 层解读为脑科学相关制药宽锚，生物药品是 BCI 在神经疾病治疗领域的互补产业。 （当月同比（%）/月 · 生物药品增值（K 层重标：神经药物研发锚）） alias_reference → BCI-L03；K 层重标为神经药物研发锚。</td>
+<td class="num">18.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">15.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 60.0,30.0 118.0,22.4"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> BCI-K04</td>
+<td>同 BCI-C01</td>
+<td class="ind-explain">医疗仪器设备及器械制造业营收——K 层解读为 BCI 设备（植入式电极/信号采集器等）的共享市场锚。 （累计同比（%）/月 · 医疗仪器营收（K 层重标：BCI设备市场锚）） alias_reference → BCI-C01；K 层重标为BCI设备市场锚。</td>
+<td class="num">5.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">6.4%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr></tbody>
+</table>
+</section><section id="sec-T11" class="sector-section">
+<h2>T11 储能产业</h2>
+<div class="sector-meta"><span class="badge" style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55">侧重机会</span><span class="badge" style="background:#f9731622;color:#f97316;border:1px solid #f9731655">已定价</span></div>
+<h3>估值读数</h3>
+
+<p class="val-index-desc">锚定指数：<strong>中证储能主题（931747.CSI）</strong> · 数据日 20260529</p>
+<div class="val-grid">
+  <div class="val-item"><label>收盘点位</label><div>9045.0673</div></div>
+  <div class="val-item"><label>PE TTM</label><div>29.53</div></div>
+  <div class="val-item val-item-wide"><label>PE 窗口内位置</label><div><strong>15%</strong> <span class="muted">PE 近28期窗口内位置</span></div><small class="muted">28 期样本 · 与下方近28期 PE 折线同窗口同纵轴（低=0% 高=100%）</small></div><div class="val-item"><label>定价状态（V15）</label><div>已定价</div></div>
+  <div class="val-item"><label>T+5 预测方向</label><div>↓ <span class="muted">2026-06-01</span></div></div>
+</div>
+<div class="dual-spark">
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,38.0 8.8,38.0 15.5,35.2 22.3,29.6 29.0,25.0 35.8,28.8 42.6,21.5 49.3,13.8 56.1,17.3 62.8,18.8 69.6,10.0 76.3,11.6 83.1,6.3 89.9,7.5 96.6,10.4 103.4,5.4 110.1,8.2 116.9,5.8 123.7,11.1 130.4,10.5 137.2,8.5 143.9,6.3 150.7,2.0 157.4,7.9 164.2,5.8 171.0,7.6 177.7,6.9 184.5,3.1 191.2,2.0 198.0,8.3"/></svg><span class="spark-label">近30期收盘走势（仓表 M01）</span></div>
+  <div class="spark-box"><svg width="200" height="40" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,6.9 9.3,2.9 16.5,5.7 23.8,5.5 31.0,4.5 38.3,7.7 45.6,10.2 52.8,2.0 60.1,5.3 67.3,5.3 74.6,5.3 81.9,24.8 89.1,27.0 96.4,31.0 103.6,27.2 110.9,31.5 118.1,30.2 125.4,33.8 132.7,33.7 139.9,34.6 147.2,33.2 154.4,32.3 161.7,35.0 169.0,36.3 176.2,38.0 183.5,37.3 190.7,33.5 198.0,32.5"/></svg><span class="spark-label">近28期 PE 走势（仓表 M02）</span></div>
+</div>
+<h4 class="sub-h4">T+5 方向预测（当日）</h4>
+
+<p class="pred-note">主模型：<strong>xgboost_dir</strong> · 生成于 2026-05-30</p>
+<table class="pred-table">
+<thead><tr><th>基准日</th><th>基准收盘</th><th>T+5 目标日</th><th>预测收盘</th><th>预测方向</th></tr></thead>
+<tbody><tr>
+<td class="muted">2026-05-29</td>
+<td class="num">9045.0673</td>
+<td class="muted">2026-06-01</td>
+<td class="num">8773.72</td>
+<td><span class="dir-down">↓</span></td>
+</tr></tbody>
+</table>
+<h4 class="sub-h4">T+5 方向预测 vs 实际（主模型 xgboost_dir）</h4>
+<p class="pred-note">已到期可验证 <strong>3</strong> 次 · 命中 <strong>2</strong> 次 · 准确率 <strong>67%</strong></p>
+<table class="pred-table pred-history">
+<thead><tr><th>预测日</th><th>基准交易日</th><th>实际 T+5 日</th><th>预测方向</th><th>实际方向</th><th>实际收盘</th><th>命中</th></tr></thead>
+<tbody><tr><td class='muted'>2026-05-30</td><td class='muted'>2026-05-29</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>9045.07</td><td><span class="hit-no">✗</span></td></tr><tr><td class='muted'>2026-05-29</td><td class='muted'>2026-05-28</td><td class='muted'>2026-06-04</td><td><span class="dir-up">↑</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-27</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-26</td><td class='muted'>2026-05-25</td><td class='muted'>2026-06-01</td><td><span class="dir-down">↓</span></td><td><span class="muted">—</span></td><td class='num muted'>—</td><td><span class="hit-pending">待验证</span></td></tr><tr><td class='muted'>2026-05-25</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>9045.07</td><td><span class="hit-yes">✓</span></td></tr><tr><td class='muted'>2026-05-24</td><td class='muted'>2026-05-22</td><td class='muted'>2026-05-29</td><td><span class="dir-down">↓</span></td><td><span class="dir-down">↓</span></td><td class='num muted'>9045.07</td><td><span class="hit-yes">✓</span></td></tr></tbody>
+</table>
+<h3>指标矩阵 L · C · K · M</h3>
+<p class="pred-note muted">历史列：来自 V15 仓表多期观测；月/季统计指标已做历史回填。若仍仅显示单期，表示该数据源尚未采集到更早通稿。指数近 30 日走势见上方估值区。</p>
+<table class="ind-table">
+<thead><tr><th>层</th><th>指标</th><th>指标解释</th><th>最新值</th><th>期别</th><th>上期</th><th>历史</th></tr></thead>
+<tbody><tr>
+<td><span class="lc lc-l">L</span> ES-L02</td>
+<td>国家统计局固定资产投资</td>
+<td class="ind-explain">电气机械和器材制造业固定资产投资累计同比——作为储能产业产能扩张的先行资本开支信号。 （累计同比（%）/月 · 固定资产投资分行业） 投资附表「电气机械和器材制造业」行累计同比。</td>
+<td class="num">2.9%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">5.8%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-l">L</span> ES-L03</td>
+<td>同 AS-C02</td>
+<td class="ind-explain">制造业技术改造投资累计同比——作为储能产线智能化/自动化升级的宽锚投资信号。 （同 AS-C02 · 同 AS-C02） 引用 AS-C02 同源。</td>
+<td class="num">11.5%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.5%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,30.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> ES-C01</td>
+<td>国家统计局工业增加值</td>
+<td class="ind-explain">电气机械和器材制造业增加值当月同比——储能制造环节当期产出强度，用于验证产能投资是否转化为实体产出。 （当月同比（%）/月 · 工业增加值分行业） 工业增加值分行业表「电气机械和器材制造业」行。</td>
+<td class="num">6.2%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">8.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-c">C</span> ES-C02</td>
+<td>国家统计局工业利润</td>
+<td class="ind-explain">电气机械和器材制造业营收/利润累计同比——储能制造环节当期盈利健康度。 （累计同比（%）/月 · 规模以上工业企业利润分行业） 工业企业利润新闻稿分行业表「电气机械和器材制造业」行。</td>
+<td class="num">9%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> ES-K03</td>
+<td>同 ES-C02</td>
+<td class="ind-explain">电气机械和器材制造业营收增速——K 层解读为储能制造环节的收入锚，营收走弱而锂电池产量高增时意味着行业在价格战中压缩毛利。 （累计同比（%）/月 · 电气机械营收（K 层重标：行业收入锚）） alias_reference → ES-C02；K 层重标为行业收入锚。</td>
+<td class="num">9%</td>
+<td class="muted">2026年1—4月</td>
+<td class="muted">11.7%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-k">K</span> ES-K04</td>
+<td>同 RB-C02</td>
+<td class="ind-explain">新能源汽车产量——K 层解读为储能产业最大终端应用需求锚，新能源汽车是动力电池最大的下游市场（储能电池+动力电池共享锂电制造基座）。 （累计产量/月 · 新能源汽车产量（K 层重标：终端需求锚）） alias_reference → RB-C02；K 层重标为终端需求锚。</td>
+<td class="num">8.8%</td>
+<td class="muted">2026年2月</td>
+<td class="muted">12.3%</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 31.0,14.1 60.0,18.0 89.0,26.3 118.0,30.0"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> ES-M01</td>
+<td>中证指数公司 / Tushare</td>
+<td class="ind-explain">中证储能主题指数 — 选取储能领域相关行业的上市公司证券；作为储能赛道的市场定价反馈。 （收盘价/日（月频落盘） · 中证储能主题指数 (931747.CSI)） Tushare index_daily(ts_code=&#x27;931747.CSI&#x27;) 取最近交易日 close；月频报告取当月最后交易日或最新可用交易日收盘价。</td>
+<td class="num">9,045.07</td>
+<td class="muted">20260529</td>
+<td class="muted">9,337.75</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,21.0 10.9,13.5 19.8,30.0 28.8,28.0 37.7,21.8 46.6,15.0 55.5,2.1 64.5,20.1 73.4,13.6 82.3,19.1 91.2,17.1 100.2,5.2 109.1,2.0 118.0,21.3"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> ES-M02</td>
+<td>中证指数公司 / AKShare(csindex)</td>
+<td class="ind-explain">中证储能主题指数 PE-TTM；历史分位用于判断定价水位（偏差标注：指数 2021 年发布，历史分位较短）。 （PE-TTM/日（月频落盘） · 中证储能主题指数 PE-TTM） AKShare stock_zh_index_value_csindex(symbol=&#x27;931747&#x27;) 取最近交易日 市盈率1。</td>
+<td class="num">29.53x</td>
+<td class="muted">2026-05-28</td>
+<td class="muted">29.36x</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#ef4444" stroke-width="1.5" points="2.0,2.0 10.9,13.2 19.8,9.8 28.8,19.1 37.7,19.0 46.6,21.1 55.5,17.6 64.5,15.3 73.4,22.2 82.3,25.6 91.2,30.0 100.2,28.2 109.1,18.4 118.0,15.8"/></svg></td>
+</tr><tr>
+<td><span class="lc lc-m">M</span> ES-M03</td>
+<td>NASDAQ / AKShare(东方财富)</td>
+<td class="ind-explain">Global X 锂与电池技术 ETF（LIT）— 覆盖全球锂矿/电池制造/储能技术全链标的；作为 T11 储能境外定价对照。 （收盘价/日（月频落盘） · Global X Lithium &amp; Battery Tech ETF (LIT)） akshare stock_us_spot_em() 筛选代码 LIT 取最新价。</td>
+<td class="num">87.15</td>
+<td class="muted">20260529</td>
+<td class="muted">87.5</td>
+<td><svg width="120" height="32" class="spark"><polyline fill="none" stroke="#22c55e" stroke-width="1.5" points="2.0,23.9 18.6,30.0 35.1,21.6 51.7,12.9 68.3,7.6 84.9,11.6 101.4,2.0 118.0,3.7"/></svg></td>
+</tr></tbody>
+</table>
+</section>
+</div>
+<footer>
+  <div class="disclaimer">
+    <p style="text-align:center;margin:0 0 20px;color:var(--text);font-size:12px">
+      <strong>VentureSights</strong> · 十大战略赛道看板 · 生成于 2026-05-30
+    </p>
+    <h4>免责声明</h4>
+    <p>本看板由 VentureSights（市场与企业分析数据咨询机构）基于公开信息及内部模型整理，仅供一般信息参考之用，不构成任何形式的投资建议、融资建议、证券研究报告、要约或承诺，亦不应被视为对未来结果的保证。所含观点、预测与判断基于截至数据日的可得信息与特定假设，可能随市场、政策、数据口径或信息更新而调整。VentureSights 不对信息的完整性、准确性、及时性作出明示或默示保证。任何依据本材料所作的决策与行动，均由使用者自行承担责任。</p>
+    <h4>版权与商标</h4>
+    <p>除非另有书面约定，本看板著作权归 VentureSights 所有。未经许可，不得以任何形式复制、摘编、转载、传播或用于商业用途。VentureSights 及 VentureSights 标识为 VentureSights 的商标或注册商标。文中提及的指数、公司名称、产品名称及标识可能为其各自权利人的商标，仅用于识别目的。</p>
+  </div>
+</footer>
+<p class="wrap" style="padding-top:0;color:var(--muted);font-size:12px;text-align:center">
+  核验：指标矩阵与估值区（收盘/PE/分位/折线）均读 V15 仓表 M01/M02，期别格式见 dashboard_ground_truth.json。
+</p>
+</body>
+</html>
